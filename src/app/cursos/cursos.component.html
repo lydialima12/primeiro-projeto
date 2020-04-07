@@ -1,4 +1,17 @@
-<p>cursos component</p>
+<p>Cursos do portal {{nomePortal}}</p>
 
+<ul>
+    <!-- let curso: é a declaração da variável -->
+    <!-- of cursos: quer dizer que será reiterado com, neste caso, o array chamado cursos -->
+    
+    <!-- O ng for é traduzido por: 
+        for(let i = 0; i < this.cursos.length; i++){
+            let curso = this.cursos[1];
+    } 
+-->
+    <li *ngFor="let curso of cursos">
+        {{ curso }}
+    </li>
+</ul>
 
 <app-curso-detalhe></app-curso-detalhe>
